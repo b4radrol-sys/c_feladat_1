@@ -1,0 +1,55 @@
+/*
+//6
+char[] karakterek = {'-', '_', '.'};
+
+void jelszo_erosseg(string jelszo)
+{
+    int pont = 1;
+
+    if (jelszo.Length > 4)
+    {
+        pont ++;
+    }
+
+    if (jelszo.Length > 7)
+    {
+        pont += 2;
+    }
+
+    foreach (char betu in jelszo)
+    {
+        if (karakterek.Contains(betu))
+        {
+            pont+= 2;
+        };
+    };
+
+    if (jelszo.Contains("jelszo") || jelszo.Contains("123"))
+    {
+        pont = 0;
+    }
+
+    if (jelszo.Length == 0)
+    {
+        pont = 0;
+    }
+
+    Console.WriteLine(pont);
+}
+
+jelszo_erosseg("hazi_macska_4_life");
+jelszo_erosseg("ez1feltorhetetlenjelszo");
+*/
+//7
+char[] maganhangzok = { 'a', 'e', 'u', 'i', 'o' };
+
+void maganhangzot_torol(string szoveg)
+{
+    foreach (char c in szoveg)
+    {
+        if maganhangzok.Contains(c)
+        {
+
+        }
+    }
+}
