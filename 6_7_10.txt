@@ -39,17 +39,101 @@ void jelszo_erosseg(string jelszo)
 
 jelszo_erosseg("hazi_macska_4_life");
 jelszo_erosseg("ez1feltorhetetlenjelszo");
-*/
+
 //7
-char[] maganhangzok = { 'a', 'e', 'u', 'i', 'o' };
+char[] maganhangzok = { 'a', 'e', 'u', 'i', 'o', 'A', 'E', 'U', 'I', 'O' };
 
 void maganhangzot_torol(string szoveg)
 {
     foreach (char c in szoveg)
     {
-        if maganhangzok.Contains(c)
-        {
 
+        if (maganhangzok.Contains(c))
+        {
+            Console.Write("");
+        }
+        else
+        {
+            Console.Write(c);
         }
     }
 }
+
+maganhangzot_torol("Iden Java szigeten voltunk nyaralni. Nem is tudtam, hogy elneveztek egy helyet egy programozasi nyelvrol.");
+*/
+//10
+void elmozdulas(string irany)
+{
+    int x = 0;
+    int y = 0;
+
+
+    foreach (char c in irany)
+    {
+        if (c == 'J')
+        {
+            x++;
+        }
+        else if (c == 'B')
+        {
+            x--;
+        }
+        else if (c == 'F')
+        {
+            y++;
+        }
+        else if (c == 'L')
+        {
+            y--;
+        }
+    }
+
+    string xirany = "";
+    string yirany = "";
+
+    if (x > 0)
+    {
+        xirany = "jobbra";
+    }
+    else
+    {
+        xirany = "balra";
+    }
+
+    if (y > 0)
+    {
+        yirany = "fel";
+    }
+    else
+    {
+        yirany = "le";
+    }
+
+    if (x != 0)
+    {
+        if (y != 0)
+        {
+            Console.WriteLine($"{Math.Abs(x)} lepes {xirany}, {Math.Abs(y)} lepes {yirany}");
+        }
+        else
+        {
+            Console.WriteLine($"{Math.Abs(x)} lepes {xirany}");
+        }
+
+    }
+    else
+    {
+        if (y != 0)
+        {
+            Console.WriteLine($"{Math.Abs(y)} lepes {yirany}");
+        }
+        else
+        {
+            Console.WriteLine("Nem mentunk sehova");
+        }
+    }
+    
+
+}
+
+elmozdulas(Console.ReadLine());
